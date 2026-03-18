@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>True Nordic Supplements | Premium Omega-3 fra Norge</title>
+  <meta name="description" content="True Nordic Supplements tilbyr premium Omega-3 fra norsk fisk, inspirert av arktisk natur, renhet og vitenskapelig dokumentert kvalitet." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#08111f',
+            fjord: '#0d2238',
+            glacier: '#dff4ff',
+            ice: '#f5fbff',
+            aurora: '#64d5ff',
+            gold: '#d7b26d',
+            steel: '#9fb2c6'
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(255,255,255,.05), 0 20px 60px rgba(0,0,0,.35)',
+            premium: '0 0 0 1px rgba(215,178,109,.28), 0 20px 60px rgba(0,0,0,.45)',
+            cool: '0 0 0 1px rgba(100,213,255,.20), 0 20px 60px rgba(0,0,0,.35)'
+          },
+          backgroundImage: {
+            'hero-overlay': 'linear-gradient(180deg, rgba(8,17,31,.55) 0%, rgba(8,17,31,.82) 60%, rgba(8,17,31,.96) 100%)',
+            'premium-glow': 'radial-gradient(circle at top, rgba(215,178,109,.18), transparent 50%)',
+            'daily-glow': 'radial-gradient(circle at top, rgba(100,213,255,.16), transparent 50%)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(100,213,255,.08), transparent 25%),
+        radial-gradient(circle at 80% 10%, rgba(215,178,109,.07), transparent 22%),
+        linear-gradient(180deg, #07101b 0%, #0a1728 42%, #07101b 100%);
+    }
+
+    .glass {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(9, 20, 35, 0.72);
+    }
+
+    .section-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .text-balance { text-wrap: balance; }
+
+    .product-border-premium {
+      border: 1px solid rgba(215,178,109,.25);
+    }
+
+    .product-border-daily {
+      border: 1px solid rgba(100,213,255,.20);
+    }
+
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      margin-top: 6px;
+      transition: width .25s ease;
+      background: linear-gradient(90deg, #64d5ff, #d7b26d);
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="font-sans text-white selection:bg-aurora/30 selection:text-white">
+  <header id="top" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-midnight/75 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="#hero" class="flex items-center gap-3">
+        <div class="flex h-11 w-11 items-center justify-center rounded-full border border-gold/30 bg-white/5 text-sm font-semibold tracking-[0.25em] text-gold">TNS</div>
+        <div>
+          <p class="text-[11px] uppercase tracking-[0.35em] text-steel">True Nordic</p>
+          <p class="text-sm font-medium tracking-[0.22em] text-white/95">Supplements</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-8 md:flex">
+        <a href="#hero" class="nav-link text-sm uppercase tracking-[0.24em] text-white/85">Forside</a>
+        <a href="#products" class="nav-link text-sm uppercase tracking-[0.24em] text-white/85">Produkter</a>
+        <a href="#about" class="nav-link text-sm uppercase tracking-[0.24em] text-white/85">Om Oss</a>
+        <a href="#contact" class="nav-link text-sm uppercase tracking-[0.24em] text-white/85">Kontakt</a>
+      </nav>
+
+      <button id="menuButton" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white md:hidden" aria-label="Åpne meny" aria-expanded="false" aria-controls="mobileMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-midnight/95 md:hidden">
+      <nav class="mx-auto flex max-w-7xl flex-col px-6 py-4">
+        <a href="#hero" class="rounded-xl px-3 py-3 text-sm uppercase tracking-[0.24em] text-white/85 hover:bg-white/5">Forside</a>
+        <a href="#products" class="rounded-xl px-3 py-3 text-sm uppercase tracking-[0.24em] text-white/85 hover:bg-white/5">Produkter</a>
+        <a href="#about" class="rounded-xl px-3 py-3 text-sm uppercase tracking-[0.24em] text-white/85 hover:bg-white/5">Om Oss</a>
+        <a href="#contact" class="rounded-xl px-3 py-3 text-sm uppercase tracking-[0.24em] text-white/85 hover:bg-white/5">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="relative min-h-screen overflow-hidden pt-28">
+      <!-- HERO IMAGE SLOT: Anbefalt format 16:9 eller 21:9, minimum 1920x1080. Bruk gjerne norsk kyst, fjord, nordlys eller åpent hav. -->
+      <img src="hero-norwegian-ocean.jpg" alt="Dramatisk norsk kystlinje med hav og nordlys" class="absolute inset-0 h-full w-full object-cover opacity-40" />
+      <div class="absolute inset-0 bg-hero-overlay"></div>
+      <div class="absolute inset-0 section-grid opacity-20"></div>
+
+      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-14 px-6 py-16 lg:grid-cols-[1.15fr_.85fr] lg:px-8">
+        <div class="max-w-3xl">
+          <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.35em] text-glacier/80">
+            <span class="h-2 w-2 rounded-full bg-aurora shadow-[0_0_20px_rgba(100,213,255,.8)]"></span>
+            Ren Omega-3 fra arktiske farvann
+          </div>
+
+          <h1 class="max-w-4xl text-balance text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
+            Nordic purity.
+            <span class="bg-gradient-to-r from-white via-glacier to-gold bg-clip-text text-transparent">Science-backed marine Omega-3.</span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
+            True Nordic Supplements kombinerer norsk fisk, dokumentert kvalitet og et kompromissløst fokus på rene produkter. Skapt for deg som vil ha en skandinavisk standard på helseprodukter — ærlig, rent og bærekraftig.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href="#products" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-gold to-[#e4c48b] px-7 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-midnight transition hover:-translate-y-0.5">
+              Utforsk produktene
+            </a>
+            <a href="#about" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition hover:border-aurora/40 hover:bg-white/10">
+              Les om kvaliteten
+            </a>
+          </div>
+
+          <div class="mt-12 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-3xl font-semibold text-white">Made in Norway</p>
+              <p class="mt-2 text-sm uppercase tracking-[0.2em] text-steel">Norsk opprinnelse</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-3xl font-semibold text-white">EPA + DHA</p>
+              <p class="mt-2 text-sm uppercase tracking-[0.2em] text-steel">Daglig støtte</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-3xl font-semibold text-white">Clean Label</p>
+              <p class="mt-2 text-sm uppercase tracking-[0.2em] text-steel">Ingen unødvendige tilsetninger</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-6 rounded-[2rem] bg-premium-glow blur-2xl"></div>
+          <div class="glass relative overflow-hidden rounded-[2rem] border border-white/10 p-6 shadow-glow">
+            <div class="mb-6 flex items-center justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-[0.32em] text-gold">Flaggskip</p>
+                <h2 class="mt-2 text-2xl font-semibold text-white">Nordic Light PREMIUM</h2>
+              </div>
+              <span class="rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[11px] uppercase tracking-[0.25em] text-gold">Ultra High EPA & DHA</span>
+            </div>
+
+            <!-- FEATURE PRODUCT IMAGE SLOT: Anbefalt transparent PNG/WebP av produktflaske, ca. 1200x1600, vertikalt utsnitt. -->
+            <div class="rounded-[1.75rem] border border-gold/20 bg-gradient-to-b from-white/[0.07] to-transparent p-6">
+              <img src="premium-product-bottle.png" alt="Nordic Light Premium Marine Omega-3 flaske" class="mx-auto h-[420px] w-auto object-contain" />
+            </div>
+
+            <div class="mt-6 grid grid-cols-2 gap-4">
+              <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p class="text-xs uppercase tracking-[0.24em] text-steel">Per servering</p>
+                <p class="mt-2 text-xl font-semibold text-white">1000 mg</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p class="text-xs uppercase tracking-[0.24em] text-steel">Opprinnelse</p>
+                <p class="mt-2 text-xl font-semibold text-white">Norsk fisk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="relative py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm uppercase tracking-[0.32em] text-aurora">Produkter</p>
+          <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">To typer. Én nordisk kvalitetsstandard.</h2>
+          <p class="mt-5 text-lg leading-8 text-white/70">
+            Velg mellom vårt mest konsentrerte premiumprodukt eller en balansert daglig formel. Begge er utviklet med fokus på renhet, sporbarhet fra rene marine ingredienser.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-8 lg:grid-cols-2">
+          <article class="group relative overflow-hidden rounded-[2rem] bg-premium-glow p-[1px] shadow-premium">
+            <div class="h-full rounded-[2rem] bg-[linear-gradient(180deg,rgba(18,27,41,.98),rgba(9,15,26,.98))] p-8 product-border-premium">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.35em] text-gold">Premium</p>
+                  <h3 class="mt-3 text-3xl font-semibold text-white">Nordic Light PREMIUM</h3>
+                  <p class="mt-3 max-w-xl text-white/70">Flaggskipet for deg som ønsker maksimal styrke, høy konsentrasjon av EPA og DHA og et mer eksklusivt uttrykk.</p>
+                </div>
+                <div class="rounded-full border border-gold/25 bg-gold/10 px-4 py-2 text-sm font-medium text-gold">Pris: 399 kr</div>
+              </div>
+
+              <div class="mt-8 grid items-center gap-8 md:grid-cols-[.9fr_1.1fr]">
+                <!-- PRODUCT CARD IMAGE SLOT: Anbefalt transparent PNG/WebP, ca. 1000x1300. -->
+                <div class="rounded-[1.75rem] border border-gold/15 bg-gradient-to-b from-white/[0.05] to-transparent p-6">
+                  <img src="premium-product-bottle.png" alt="Nordic Light Premium produkt" class="mx-auto h-80 w-auto object-contain transition duration-500 group-hover:scale-[1.03]" />
+                </div>
+
+                <div>
+                  <ul class="space-y-4 text-white/80">
+                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-gold"></span><span>Ultra High EPA & DHA for avansert daglig støtte.</span></li>
+                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-gold"></span><span>Utviklet for deg som vil prioritere hjerte, hjerne og syn med en mer potent formulering.</span></li>
+                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-gold"></span><span>Passer godt som flaggskip-produkt i nettbutikk, kampanjer og abonnementsmodeller.</span></li>
+                  </ul>
+
+                  <div class="mt-8 flex flex-wrap gap-3 text-xs uppercase tracking-[0.24em] text-steel">
+                    <span class="rounded-full border border-white/10 px-3 py-2">90 softgels</span>
+                    <span class="rounded-full border border-white/10 px-3 py-2">Made in Norway</span>
+                    <span class="rounded-full border border-white/10 px-3 py-2">Gluten Free</span>
+                  </div>
+
+                  <a href="#contact" class="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-gold to-[#e4c48b] px-6 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-midnight transition hover:-translate-y-0.5">
+                    Kjøp nå
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="group relative overflow-hidden rounded-[2rem] bg-daily-glow p-[1px] shadow-cool">
+            <div class="h-full rounded-[2rem] bg-[linear-gradient(180deg,rgba(11,27,45,.98),rgba(8,17,31,.98))] p-8 product-border-daily">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.35em] text-aurora">Daily</p>
+                  <h3 class="mt-3 text-3xl font-semibold text-white">Nordic Light DAILY</h3>
+                  <p class="mt-3 max-w-xl text-white/70">En balansert Omega-3 for hverdagsbruk, med et rent og friskt visuelt uttrykk inspirert av hav, is og nordlys.</p>
+                </div>
+                <div class="rounded-full border border-aurora/25 bg-aurora/10 px-4 py-2 text-sm font-medium text-aurora">Pris: 299 kr</div>
+              </div>
+
+              <div class="mt-8 grid items-center gap-8 md:grid-cols-[.9fr_1.1fr]">
+                <!-- PRODUCT CARD IMAGE SLOT: Anbefalt transparent PNG/WebP, ca. 1000x1300. -->
+                <div class="rounded-[1.75rem] border border-aurora/15 bg-gradient-to-b from-white/[0.05] to-transparent p-6">
+                  <img src="daily-product-bottle.png" alt="Nordic Light Daily produkt" class="mx-auto h-80 w-auto object-contain transition duration-500 group-hover:scale-[1.03]" />
+                </div>
+
+                <div>
+                  <ul class="space-y-4 text-white/80">
+                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-aurora"></span><span>High EPA & DHA tilpasset daglig vedlikehold og regelmessig bruk.</span></li>
+                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-aurora"></span><span>Ideell for kunder som ønsker et enkelt, pålitelig og lett tilgjengelig Omega-3-produkt.</span></li>
+                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-aurora"></span><span>Perfekt for produktserier med abonnement, bundles eller familiefokus.</span></li>
+                  </ul>
+
+                  <div class="mt-8 flex flex-wrap gap-3 text-xs uppercase tracking-[0.24em] text-steel">
+                    <span class="rounded-full border border-white/10 px-3 py-2">90 softgels</span>
+                    <span class="rounded-full border border-white/10 px-3 py-2">Everyday Formula</span>
+                    <span class="rounded-full border border-white/10 px-3 py-2">No Artificial Additives</span>
+                  </div>
+
+                  <a href="#contact" class="mt-8 inline-flex items-center justify-center rounded-full border border-aurora/35 bg-aurora/12 px-6 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-aurora transition hover:-translate-y-0.5 hover:bg-aurora/18">
+                    Kjøp nå
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="relative overflow-hidden py-24">
+      <div class="absolute inset-0 section-grid opacity-20"></div>
+      <div class="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[.9fr_1.1fr] lg:px-8">
+        <div>
+          <p class="text-sm uppercase tracking-[0.32em] text-gold">Hvorfor True Nordic</p>
+          <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Renhet fra kaldt vann. Kvalitet du kan dokumentere.</h2>
+          <p class="mt-6 text-lg leading-8 text-white/72">
+            Når råvaren kommer fra norske farvann, starter kvalitetsreisen i et av verdens mest krevende og rene marine miljøer. Resultatet er et produktunivers som bygger på sporbarhet, naturlig opprinnelse og et tydelig vitenskapelig fundament.
+          </p>
+
+          <div class="mt-10 space-y-5">
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+              <h3 class="text-xl font-semibold text-white">Norsk fisk, høyere tillit</h3>
+              <p class="mt-2 text-white/70">Norsk marint råstoff er forbundet med strenge standarder, kaldtvannsprofil og høy forventning til kvalitet og sporbarhet.</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+              <h3 class="text-xl font-semibold text-white">Ren formulering</h3>
+              <p class="mt-2 text-white/70">Et minimalistisk ingrediensprinsipp gjør produktet lettere å forstå, enklere å stole på og mer i tråd med moderne clean-label forventninger.</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+              <h3 class="text-xl font-semibold text-white">Vitenskapelig forankret</h3>
+              <p class="mt-2 text-white/70">Kommunikasjonen bygger på dokumenterte egenskaper ved EPA og DHA, slik at merkevaren oppleves troverdig, presis og moden.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow">
+            <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/30 bg-gold/10 text-gold">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-white">Arktisk profil</h3>
+            <p class="mt-3 leading-7 text-white/70">Visuell identitet inspirert av fjord, nordlys, mørk himmel og metalliske refleksjoner gir merkevaren et tydelig premium-DNA.</p>
+          </div>
+
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow">
+            <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-aurora/30 bg-aurora/10 text-aurora">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 8c-1.657-2.667-7-1.333-7 2.5C5 15 12 20 12 20s7-5 7-9.5C19 6.667 13.657 5.333 12 8z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-white">Hjerte & velvære</h3>
+            <p class="mt-3 leading-7 text-white/70">EPA og DHA kommuniseres gjennom et klart og tillitsvekkende designspråk som er lett å forstå for kunden.</p>
+          </div>
+
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow">
+            <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-glacier">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9 12l2 2 4-4m5-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-white">Kvalitetskontroll</h3>
+            <p class="mt-3 leading-7 text-white/70">Stramme komponenter, konsistent layout og ryddig informasjonsarkitektur gjør produktet mer profesjonelt i alle flater.</p>
+          </div>
+
+          <!-- ABOUT IMAGE SLOT: Anbefalt livsstilsbilde eller naturbilde 4:5 eller 3:4, minimum 1200x1500. -->
+          <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-glow">
+            <img src="about-nordic-lifestyle.jpg" alt="Nordisk natur og bærekraftig livsstil" class="h-full min-h-[320px] w-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-glow">
+          <div class="grid lg:grid-cols-[1.05fr_.95fr]">
+            <div class="p-8 sm:p-10 lg:p-14">
+              <p class="text-sm uppercase tracking-[0.32em] text-aurora">Fordeler</p>
+              <h2 class="mt-4 text-4xl font-semibold text-white">Hvorfor norsk fisk og kompromissløs renhet betyr noe</h2>
+              <div class="mt-8 grid gap-6 sm:grid-cols-2">
+                <div>
+                  <h3 class="text-lg font-semibold text-white">Kaldtvannsopprinnelse</h3>
+                  <p class="mt-2 text-white/70">Et tydelig nordisk opphav forsterker opplevd kvalitet, autentisitet og merkeverdi.</p>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white">Færre forstyrrende ingredienser</h3>
+                  <p class="mt-2 text-white/70">Et enkelt ingrediensbilde gjør produktene lettere å forstå og enklere å velge.</p>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white">Premium-posisjonering</h3>
+                  <p class="mt-2 text-white/70">Gull- og isblå detaljer gir en sterk differensiering mellom PREMIUM og DAILY.</p>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white">Skalerbart design</h3>
+                  <p class="mt-2 text-white/70">Uttrykket kan enkelt videreføres til flere produkter, kampanjer og emballasjelinjer.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- BENEFITS IMAGE SLOT: Anbefalt natur/produktbilde 4:3 eller portrett 3:4, minimum 1400x1200. -->
+            <div class="relative min-h-[360px] border-t border-white/10 lg:border-l lg:border-t-0">
+              <img src="benefits-ocean-detail.jpg" alt="Detalj av hav og rene nordiske omgivelser" class="absolute inset-0 h-full w-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/30 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-8">
+                <div class="max-w-sm rounded-[1.5rem] border border-white/10 bg-midnight/60 p-6 backdrop-blur-md">
+                  <p class="text-sm uppercase tracking-[0.3em] text-gold">Nordic Minimalist</p>
+                  <p class="mt-3 text-white/80">Et stramt, moderne webuttrykk som oversetter emballasjens visuelle språk til en tydelig digital merkeopplevelse.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="border-t border-white/10 bg-black/20">
+    <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1fr_.9fr] lg:px-8">
+      <div>
+        <p class="text-sm uppercase tracking-[0.32em] text-gold">Kontakt</p>
+        <h2 class="mt-4 text-4xl font-semibold text-white">Bygg tillit med en tydelig nordisk merkevare.</h2>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-white/70">
+          Ta kontakt for forhandlerdialog, private label, distribusjon eller samarbeid. Denne footeren er også klargjort for nettbutikk, kundeservice eller kontaktformular senere.
+        </p>
+
+        <div class="mt-8 space-y-3 text-white/75">
+          <p><span class="font-semibold text-white">E-post:</span> hello@truenordicsupplements.com</p>
+          <p><span class="font-semibold text-white">Telefon:</span> +47 00 00 00 00</p>
+          <p><span class="font-semibold text-white">Adresse:</span> Placeholderveien 12, 0250 Oslo, Norge</p>
+        </div>
+
+        <div class="mt-8 flex gap-4">
+          <a href="#" aria-label="Instagram" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition hover:border-aurora/35 hover:text-aurora">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5a4.25 4.25 0 00-4.25-4.25h-8.5zm8.875 1.125a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5A3.5 3.5 0 1015.5 12 3.504 3.504 0 0012 8.5z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition hover:border-aurora/35 hover:text-aurora">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6H17V4.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V11H7.5v3h2.8v8h3.2z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition hover:border-aurora/35 hover:text-aurora">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 7.06A1.97 1.97 0 105.22 3.1a1.97 1.97 0 00.03 3.94zM20.44 20h-3.37v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.96V20H9.69V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.2-1.77 3.43 0 4.06 2.26 4.06 5.2V20z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-glow">
+        <p class="text-sm uppercase tracking-[0.32em] text-aurora">Nyhetsbrev</p>
+        <h3 class="mt-4 text-3xl font-semibold text-white">Få produktnyheter og lanseringer først</h3>
+        <p class="mt-4 text-white/70">Koble dette skjemaet til Mailchimp, Klaviyo eller ditt foretrukne e-postsystem når du er klar.</p>
+
+        <form class="mt-8 space-y-4">
+          <label class="block">
+            <span class="mb-2 block text-sm font-medium text-white/85">Navn</span>
+            <input type="text" placeholder="Ditt navn" class="w-full rounded-2xl border border-white/10 bg-midnight/70 px-4 py-3 text-white placeholder:text-white/35 focus:border-aurora/40 focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="mb-2 block text-sm font-medium text-white/85">E-post</span>
+            <input type="email" placeholder="navn@epost.no" class="w-full rounded-2xl border border-white/10 bg-midnight/70 px-4 py-3 text-white placeholder:text-white/35 focus:border-aurora/40 focus:outline-none" />
+          </label>
+          <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-aurora to-[#9be6ff] px-6 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-midnight transition hover:-translate-y-0.5">
+            Meld meg på
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-6 text-sm text-white/50 md:flex-row md:items-center md:justify-between lg:px-8">
+        <p>© 2025 True Nordic Supplements. Alle rettigheter forbeholdt.</p>
+        <a href="#top" class="uppercase tracking-[0.25em] text-white/60 transition hover:text-aurora">Til toppen</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
